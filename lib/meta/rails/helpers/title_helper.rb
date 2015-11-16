@@ -14,7 +14,7 @@ module MetaRailsHelpers
           content_tag(:title, page_title + ' ' + separator + ' ' + brand)
         end
       else
-        content_tag(:title, base_title)
+        content_tag(:title, brand)
       end
     end
 
