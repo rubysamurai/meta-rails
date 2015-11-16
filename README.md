@@ -1,6 +1,7 @@
 # Meta Rails
 
 [![Gem Version](https://badge.fury.io/rb/meta-rails.svg)](https://badge.fury.io/rb/meta-rails)
+[![Build Status](https://travis-ci.org/rubysamurai/meta-rails.svg)](https://travis-ci.org/rubysamurai/meta-rails)
 
 Collection of view helpers to improve search engine optimization of Ruby on Rails application by including appropriate meta tags.
 
