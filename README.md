@@ -73,7 +73,7 @@ Example of `title` helper usage with options:
 ```erb
 # mysite/app/views/static/contact.html.erb
 
-<% provide(:title, 'Contact Us') %>
+<% provide(:page_keyword, 'Big Sale') %>
 <%# other elements %>
 
 # mysite/app/views/layout/application.html.erb
@@ -90,7 +90,7 @@ Example of `title` helper usage with options:
 This example code will create HTML `<title>` element:
 
 ```html
-<title>MyBrand - Contact Us</title>
+<title>MyBrand - Big Sale</title>
 ```
 
 ## Contributing
