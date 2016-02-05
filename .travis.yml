@@ -10,9 +10,10 @@ rvm:
 before_install: gem install bundler
 
 env:
-  - RAILS_VERSION=3.2
   - RAILS_VERSION=4.0
   - RAILS_VERSION=4.1
   - RAILS_VERSION=4.2
 
 sudo: false
+
+cache: bundler
