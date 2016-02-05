@@ -1,2 +1,2 @@
 gem 'rails', '~> 3.2.0'
-gem 'test-unit', platforms: :mri_22
+gem 'test-unit', platforms: [:mri_22, :mri23]
