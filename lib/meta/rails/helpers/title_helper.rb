@@ -1,27 +1,31 @@
 module MetaRailsHelpers
   module TitleHelper
     # Produces html title element
-    def title(options = {})
-      page_title = content_for(options[:page_title] || :title)
-      separator  = options[:separator] || '|'
-      brand      = options[:brand] || default_brand
-      reverse    = options[:reverse] || false
+    def title(page_title: :title,
+              separator: '|',
+              brand: default_brand,
+              reverse: false)
 
-      if page_title.present?
-        if reverse
-          content_tag(:title, brand + ' ' + separator + ' ' + page_title)
-        else
-          content_tag(:title, page_title + ' ' + separator + ' ' + brand)
-        end
+      # Assigns content stored in a page_title
+      page_title = content_for(page_title)
+
+      # Disregards separator when title or brand is not present
+      separator = '' unless page_title.present? && brand.present?
+
+      # Returns 'brand separator title' format when reverse is true
+      # and 'title separator brand' format when reverse is false
+      if reverse == true
+        tag.title [brand, separator, page_title].reject(&:blank?).join(' ')
       else
-        content_tag(:title, brand)
+        tag.title [page_title, separator, brand].reject(&:blank?).join(' ')
       end
     end
 
     private
-      # Returns Rails application name as default brand
+
+      # Returns Rails application class name as default brand
       def default_brand
-        Rails.application.class.to_s.split('::').first
+        Rails.application.class.parent_name
       end
   end
 end
