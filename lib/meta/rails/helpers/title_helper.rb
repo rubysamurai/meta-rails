@@ -15,9 +15,9 @@ module MetaRailsHelpers
       # Returns 'brand separator title' format when reverse is true
       # and 'title separator brand' format when reverse is false
       if reverse == true
-        tag.title [brand, separator, page_title].reject(&:blank?).join(' ')
+        content_tag :title, [brand, separator, page_title].reject(&:blank?).join(' ')
       else
-        tag.title [page_title, separator, brand].reject(&:blank?).join(' ')
+        content_tag :title, [page_title, separator, brand].reject(&:blank?).join(' ')
       end
     end
 
