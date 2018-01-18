@@ -29,7 +29,7 @@ RSpec.describe MetaRailsHelpers::TitleHelper, type: :helper do
 
       it 'returns valid title when option name is not default' do
         allow(helper).to receive(:content_for).with(:page_title).and_return('Example Page')
-        expect(helper.title(page_title: :page_title)).to eq '<title>Example Page | MetaRails</title>'
+        expect(helper.title(identifier: :page_title)).to eq '<title>Example Page | MetaRails</title>'
       end
     end
 

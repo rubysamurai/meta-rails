@@ -20,7 +20,7 @@ RSpec.describe MetaRailsHelpers::MetaDescriptionHelper, type: :helper do
 
       it 'returns valid meta description when option name is not default' do
         allow(helper).to receive(:content_for).with(:page_summary).and_return('Meta description')
-        expect(helper.meta_description(page_description: :page_summary)).to eq '<meta name="description" content="Meta description" />'
+        expect(helper.meta_description(identifier: :page_summary)).to eq '<meta name="description" content="Meta description" />'
       end
     end
   end

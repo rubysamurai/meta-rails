@@ -1,23 +1,23 @@
 module MetaRailsHelpers
   module TitleHelper
     # Produces html title element
-    def title(page_title: :title,
+    def title(identifier: :title,
               separator: '|',
               brand: default_brand,
               reverse: false)
 
-      # Assigns content stored in a page_title
-      page_title = content_for(page_title)
+      # Assigns content stored in a identifier
+      title = content_for(identifier)
 
       # Disregards separator when title or brand is not present
-      separator = '' unless page_title.present? && brand.present?
+      separator = '' unless title.present? && brand.present?
 
       # Returns 'brand separator title' format when reverse is true
       # and 'title separator brand' format when reverse is false
       if reverse == true
-        content_tag :title, [brand, separator, page_title].reject(&:blank?).join(' ')
+        content_tag :title, [brand, separator, title].reject(&:blank?).join(' ')
       else
-        content_tag :title, [page_title, separator, brand].reject(&:blank?).join(' ')
+        content_tag :title, [title, separator, brand].reject(&:blank?).join(' ')
       end
     end
 

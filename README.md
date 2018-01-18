@@ -43,10 +43,10 @@ Format of HTML `<title>` element can be modified by passing options hash to the 
 
 Option       | Description                                   | Default
 -------------|-----------------------------------------------|-----------
-`:page_title`| Identifier for stored page's title            | `:title`
+`:identifier`| Identifier for stored page's title            | `:title`
 `:brand`     | Brand name                                    | Rails.application.class.parent_name
-`:separator` | Character between `:page_title` and `:brand`  | `\|`
-`:reverse`   | Switch position of `:page_title` and `:brand` | `false`
+`:separator` | Character between title and brand             | `\|`
+`:reverse`   | Switch position of title and brand            | `false`
 
 ## Meta description
 
@@ -74,9 +74,9 @@ This code will create HTML `<meta>` tag:
 
 Options hash can be passed to `meta_description` helper:
 
-Option             | Description                                   | Default
--------------------|-----------------------------------------------|-----------
-`:page_description`| Identifier for stored page's meta description | `:meta_description`
+Option       | Description                                   | Default
+-------------|-----------------------------------------------|-----------
+`:identifier`| Identifier for stored page's meta description | `:meta_description`
 
 
 ## License
