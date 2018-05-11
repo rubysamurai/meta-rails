@@ -78,6 +78,37 @@ Option       | Description                                   | Default
 -------------|-----------------------------------------------|-----------
 `:identifier`| Identifier for stored page's meta description | `:meta_description`
 
+## Robots
+
+Robots meta tag can control the behavior of search engine crawling and indexing. 
+
+#### How to use `robots` helper
+
+```erb
+# Include 'robots' helper in the head section of your site
+# e.g., ~/app/views/layouts/application.html.erb
+<head>
+  <%= robots %>
+</head>
+
+# Utilize 'provide' or 'content for' to store page's robots directives
+# e.g., ~/app/views/users/new.html.erb
+<% provide(:robots, 'noindex,nofollow') %>
+```
+
+This code will create HTML `<meta>` tag:
+
+```html
+<meta name="robots" content="noindex,nofollow" />
+```
+
+Options hash can be passed to `robots` helper:
+
+Option       | Description                                    | Default
+-------------|------------------------------------------------|-----------
+`:identifier`| Identifier for stored page's robots directives | `:robots`
+
+Please refer to [valid indexing & serving directives](https://developers.google.com/search/reference/robots_meta_tag?csw=1#valid-indexing--serving-directives) page for list of valid robots directives.
 
 ## License
 
