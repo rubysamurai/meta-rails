@@ -17,7 +17,7 @@ Save `Gemfile` and execute `bundle` command to install the gem.
 
 ## Title
 
-Based on [Moz](https://moz.com/learn/seo/title-tag) and [Google Help](https://support.google.com/webmasters/answer/35624#3) guidelines a proper title consist of *page title*, *brand name*, and *separator* between them.
+Based on [Google Help](https://support.google.com/webmasters/answer/35624#3) and [Moz](https://moz.com/learn/seo/title-tag) guidelines a proper title consist of *page title*, *brand name*, and *separator* between them.
 
 #### How to use `title` helper
 
@@ -39,9 +39,9 @@ This code will create HTML `<title>` element:
 <title>Sign up | AwesomeRailsApp</title>
 ```
 
-Format of HTML `<title>` element can be modified by passing options hash to the `title` helper:
+Format of HTML `<title>` element can be modified by passing keyword arguments to `title` helper:
 
-Option       | Description                                   | Default
+Argument     | Description                                   | Default
 -------------|-----------------------------------------------|-----------
 `:identifier`| Identifier for stored page's title            | `:title`
 `:brand`     | Brand name                                    | Rails.application.class.parent_name
@@ -50,7 +50,7 @@ Option       | Description                                   | Default
 
 ## Meta description
 
-Meta description tag provides a short summary of the page. 
+Meta description tag provides a short summary of the page (refer to [this](https://support.google.com/webmasters/answer/35624?hl=en&ref_topic=6001942#1) and [this](https://moz.com/learn/seo/meta-description) articles for details).
 
 #### How to use `meta_description` helper
 
@@ -72,15 +72,15 @@ This code will create HTML `<meta>` tag:
 <meta name="description" content="Register to manage your account" />
 ```
 
-Options hash can be passed to `meta_description` helper:
+Keyword arguments can be passed to `meta_description` helper:
 
-Option       | Description                                   | Default
+Argument     | Description                                   | Default
 -------------|-----------------------------------------------|-----------
 `:identifier`| Identifier for stored page's meta description | `:meta_description`
 
 ## Robots
 
-Robots meta tag can control the behavior of search engine crawling and indexing. 
+Robots meta tag can control the behavior of search engine crawling and indexing (refer to [this](https://developers.google.com/search/reference/robots_meta_tag) and [this](https://moz.com/learn/seo/robots-meta-directives) articles for details).
 
 #### How to use `robots` helper
 
@@ -102,9 +102,9 @@ This code will create HTML `<meta>` tag:
 <meta name="robots" content="noindex,nofollow" />
 ```
 
-Options hash can be passed to `robots` helper:
+Keyword arguments can be passed to `robots` helper:
 
-Option       | Description                                    | Default
+Argument     | Description                                    | Default
 -------------|------------------------------------------------|-----------
 `:identifier`| Identifier for stored page's robots directives | `:robots`
 
