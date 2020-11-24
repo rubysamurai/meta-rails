@@ -1,7 +1,7 @@
 # Meta Rails
 
 [![Gem Version](https://badge.fury.io/rb/meta-rails.svg)](https://badge.fury.io/rb/meta-rails)
-[![Build Status](https://travis-ci.org/rubysamurai/meta-rails.svg)](https://travis-ci.org/rubysamurai/meta-rails)
+[![CI](https://github.com/rubysamurai/meta-rails/workflows/CI/badge.svg)](https://github.com/rubysamurai/meta-rails/actions?query=workflow%3ACI)
 
 Collection of view helpers to improve search engine optimization of Ruby on Rails application by including appropriate meta tags.
 
