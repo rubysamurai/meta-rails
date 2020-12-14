@@ -44,7 +44,7 @@ Format of HTML `<title>` element can be modified by passing keyword arguments to
 Argument     | Description                                   | Default
 -------------|-----------------------------------------------|-----------
 `:identifier`| Identifier for stored page's title            | `:title`
-`:brand`     | Brand name                                    | Rails.application.class.parent_name
+`:brand`     | Brand name                                    | Rails.application.class.module_parent_name
 `:separator` | Character between title and brand             | `\|`
 `:reverse`   | Switch position of title and brand            | `false`
 

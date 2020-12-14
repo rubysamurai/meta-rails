@@ -18,7 +18,7 @@ module MetaRailsHelpers
 
       # Returns Rails application class name as default brand
       def default_brand
-        Rails.application.class.parent_name
+        Rails.application.class.module_parent_name
       end
   end
 end
