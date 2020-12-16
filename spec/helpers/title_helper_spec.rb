@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe MetaRailsHelpers::TitleHelper, type: :helper do
   describe '.title' do
     it 'returns valid title with default options' do
@@ -11,7 +9,7 @@ RSpec.describe MetaRailsHelpers::TitleHelper, type: :helper do
       expect(helper.title(separator: ' ', brand: ' ')).to eq '<title></title>'
     end
 
-    context 'identifier' do
+    context 'with identifier' do
       it 'returns valid title when is present' do
         allow(helper).to receive(:content_for).with(:title).and_return('Default')
         expect(helper.title).to eq '<title>Default | MetaRails</title>'
@@ -29,11 +27,12 @@ RSpec.describe MetaRailsHelpers::TitleHelper, type: :helper do
 
       it 'returns valid title when name is not default' do
         allow(helper).to receive(:content_for).with(:page_title).and_return('Example Page')
-        expect(helper.title(identifier: :page_title)).to eq '<title>Example Page | MetaRails</title>'
+        expect(helper.title(identifier: :page_title))
+          .to eq '<title>Example Page | MetaRails</title>'
       end
     end
 
-    context 'separator' do
+    context 'with separator' do
       it 'returns valid title when is present' do
         allow(helper).to receive(:content_for).with(:title).and_return('Default')
         expect(helper.title(separator: '-')).to eq '<title>Default - MetaRails</title>'
@@ -50,7 +49,7 @@ RSpec.describe MetaRailsHelpers::TitleHelper, type: :helper do
       end
     end
 
-    context 'brand' do
+    context 'with brand' do
       it 'returns valid title when is present' do
         expect(helper.title(brand: 'Acme')).to eq '<title>Acme</title>'
       end
@@ -66,7 +65,7 @@ RSpec.describe MetaRailsHelpers::TitleHelper, type: :helper do
       end
     end
 
-    context 'reverse' do
+    context 'with reverse' do
       it 'returns valid title when is true' do
         allow(helper).to receive(:content_for).with(:title).and_return('Example Page')
         expect(helper.title(reverse: true)).to eq '<title>MetaRails | Example Page</title>'

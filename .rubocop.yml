@@ -1,0 +1,21 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.5
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Layout/LineLength:
+  Max: 100
+
+Naming/FileName:
+  Exclude: [lib/meta-rails.rb]
+
+Metrics/BlockLength:
+  IgnoredMethods: [RSpec.describe, describe, context]
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never

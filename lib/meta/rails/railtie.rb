@@ -1,3 +1,5 @@
+require 'rails/railtie'
+
 module MetaRailsHelpers
   class Railtie < Rails::Railtie
     initializer 'meta_description.helper' do
