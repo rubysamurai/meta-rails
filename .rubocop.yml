@@ -1,6 +1,6 @@
 AllCops:
-  NewCops: enable
   TargetRubyVersion: 2.5
+  NewCops: enable
 
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
@@ -12,10 +12,10 @@ Naming/FileName:
   Exclude: [lib/meta-rails.rb]
 
 Metrics/BlockLength:
-  IgnoredMethods: [RSpec.describe, describe, context]
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
-  EnforcedStyle: never
+  Enabled: false
